@@ -69,7 +69,6 @@ Two different modules for heart rate estimation are currently implemented, one b
 
 A module implemented to display results obtained from the algorithm. It is subdivided into four different plots, with each displaying different information. First, a frame of the video is displayed to ensure the correct video is being processed, then, ground truth information and the obtained estimations are displayed on a graph. Another block is reserved to display information about the video (Name, duration, fps...), and a fourth plot is reserved so user can plot additional information that may be obtained from one of the intermediate steps (for example, a debug graph)
 
-
 ## **Dataset Loaders**
 Currently, we include a loader for the COHFACE dataset, and a generic dataset loader in case you want to use your own videos.
 
@@ -77,36 +76,6 @@ Currently, we include a loader for the COHFACE dataset, and a generic dataset lo
 This library will be updated with new state-of-the-art blocks for the currently implemented tasks, or for new tasks, as research in this field progresses.
 
 We will also add direct support for more rPPG datasets.
-
-## How to use
-
-First, define a function with the modules you will use. In this example, the modules used will be a face detection performed with deepface module using SSD dectector, followed by a region selection and a background illumination balance block, and then heart rate is estimated using frequency analysis.
-
-Code for this function would look like this:
-
->def EstimationProcess1(video):
->
->  imgs = video.frames #Get the frames from the video input
->  
->  x = dfblock.BatchProcess(imgs) #Detect and stabilize face
->
->  bg = dfblock.background #Get the background ('negative' of the face detection)
->
->  x = rois.BatchProcess(x,vis=False) #Cut ROI
->
->  ib_block.background_frames = bg #setup background for illumination balance block
->
->  x = CABlock.BatchProcess(x) #extract color averages
->
->  x = ib_block.BatchProcess(x) #compensate averages with background illumination 
->
->  x = hrest.BatchProcess(x) #estimate heart rate
-
-Another advantage of this method is that it is easy to remove blocks and perform ablation tests in order to measure the impact of each block in the process.
-
-
-
-
 
 ## **Requirements**
 
