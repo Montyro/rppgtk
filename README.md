@@ -23,9 +23,9 @@ As of now, three different face detection modules have been implemented:
 
 
 * **SSD with mobilenet V2 backbone** Detector with an ssd mobilenetv2 backbone.
+* 
 * **RetinaFace** Module for face detection using a different implementation of the retinaface model.
 
-* **DTStab** This module doesn't just perform face detection using either opencv haar cascade or the previosly mentone ssd with mobilenet v2 backbone, but also performs a face stabilization to keep it the same size and in the same position in the image. 
 
 ### **Skin segmentation**
 For skin segmentation, we have implemented two different modules.
