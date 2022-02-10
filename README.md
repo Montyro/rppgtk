@@ -45,8 +45,8 @@ Algorithms may be applied over different color spaces with varying performance. 
 * RGB
 * BGR
 * HSV
-* YcBcR
-* CieLab
+* YCbCr
+* CIELab
 
 ### **Signal Processing Modules**
 
