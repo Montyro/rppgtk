@@ -23,7 +23,7 @@ As of now, three different face detection modules have been implemented:
 
 
 * **SSD with mobilenet V2 backbone** Detector with an ssd mobilenetv2 backbone.
-* 
+
 * **RetinaFace** Module for face detection using a different implementation of the retinaface model.
 
 
