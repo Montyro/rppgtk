@@ -1,26 +1,30 @@
-# **SIPTk-PPG**
-
+# **An Image-Processing Toolkit for Remote Photoplethysmography.**
 
 <p align="center">
-  <img src="./Figures/logovpu.gif" width="200">
-  <img src="./Figures/logo_uam.jpg"width="200">
-  <img src="./Figures/LogoOficial-EPS-300-3x3.png" width="200">
+  <img src="./Figures/logovpu.gif" height="300">
+  <img src="./Figures/LogoOficial-EPS-300-3x3.png" height="300">
+  <img src="./Figures/logo_uam.jpg"height="300">
 </p>
 
-This is a library that includes different modules to more easily perform some of the usual preprocessing steps in remote photoplethysmography, like face detection, changes in color space, skin detection, region of interest selection among others. Modules include some algorithms that use deep learning, developed with the tensorflow library.
+This is a library that includes different modules to more easily perform some of the usual preprocessing steps in remote photoplethysmography, like face detection, changes in color space, skin detection, region of interest selection among others. Modules include some algorithms that use deep learning, using the tensorflow library.
+
+## Code will be uploaded when the letter associated to this work is published. The toolkit will be available to install using pip.
+
 
 ## **Currently implemented modules**
 
 <p align="center">
-  <img src="./Figures/blocks.png">
+  <img src="./Figures/Diagram_v2_wide.png">
 </p>
 
 
 ### **Face detection**
-As of now, three different face detection modules have been implemented:
+As of now, five different face detection modules have been implemented:
 
 * **Deepface** A module that encapsulates the face detection capabilities of the Deepface library, which includes different face detectors: based on haar cascades, a deep learning classifier based on ssd, one based on dlib, one using mtcnn and at last one using retinaface. At the end of this readme, there is a comparison in performane and accuracy for the different models obtained using our internal dataset.
 
+* **Yolo V3** A module that encapsulates a version of the YoloV3 algorithm. It runs on CPU.
+* **Viola-Jones** A module that encapsulates an implementation of the Viola-Jone algorithms. Runs on CPU.
 
 * **SSD with mobilenet V2 backbone** Detector with an ssd mobilenetv2 backbone.
 
@@ -28,15 +32,21 @@ As of now, three different face detection modules have been implemented:
 
 
 ### **Skin segmentation**
-For skin segmentation, we have implemented two different modules.
+For skin segmentation, we have implemented three different modules.
 
 * **U-Net Skin Segmentation** A model that uses a U-Net semantic segmentation network, trained using the ABD-Skin segmentation dataset.
-
 * **Color based skin segmentation** Using thresholds in different color spaces. While this performs faster than the deep learning one, it is less robust when applied over darker skin tonalities, so we recommend using the other segmentation module for more generic results.
+* **DeepLabV3** A DeepLabV3 model trained using the ABD-Skin segmentation dataset.
+
 
 ### **Region of Interest selection**
 
-* **ROI Module** A module was implemented that by default selects the forehead of the subject, by using proportions. It assumes that the input is an already cut image of a face. It can also receive different regions to cut using an additional parameter.
+* **Forehead** This block selects the forehead of the detected face as the RoI.
+* **Cheeks** This block selects the cheeks of the detected face as the RoI.
+* **Forehead and Cheeks** This block selects both forehead and cheeks of the detected face as the RoI.
+* **Under eyes** This block selects a region under both eyes of the detected face as the RoI.
+* **Custom** This block receives a custom region to select from the detected face as the RoI.
+
 
 ### **Color Space modules**
 
@@ -122,7 +132,7 @@ Developed using Pop Os! 21.04, some modules may not work on Windows.
 
 ## **References**
 
-List of articles referenced during the development of this library:
+List of articles used at some point during the development of this library:
 
 [**1**]  M.  Abadi,  A.  Agarwal,  P.  Barham,  E.  Brevdo,  Z.  Chen,C. Citro, G. S. Corrado, A. Davis, J. Dean, M. Devin, S. Ghe-mawat, I. Goodfellow, A. Harp, G. Irving, M. Isard, Y. Jia,R. Jozefowicz, L. Kaiser, M. Kudlur, J. Levenberg, D. Man ́e,R.  Monga,  S.  Moore,  D.  Murray,  C.  Olah,  M.  Schuster,J.  Shlens,  B.  Steiner,  I.  Sutskever,  K.  Talwar,  P.  Tucker,V. Vanhoucke, V. Vasudevan, F. Vi ́egas, O. Vinyals, P. War-den, M. Wattenberg, M. Wicke, Y. Yu, and X. Zheng. Tensor-Flow:  Large-scale machine learning on heterogeneous sys-tems, 2015. Software available from tensorflow.org
 
