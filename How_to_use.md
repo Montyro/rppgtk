@@ -3,6 +3,10 @@
 
 First, create either a virtualenv environment or a conda environment to install the libraries on. We developed and tested the library with python 3.6.13.
 
+After publication you will be able to download the toolkit with:
+> pip install rppgtk
+
+
 **If you have a CUDA compatible GPU:**
 
 Run:
