@@ -88,6 +88,14 @@ This library will be updated with new state-of-the-art blocks for the currently 
 
 We will also add direct support for more rPPG datasets.
 
+### Canonical Block Order
+
+<p align="center">
+  <img src="./Figures/monta1.png">
+</p>
+
+The figure above represents the canonical block order, although you can combine them in any order (be careful with input signal format!)
+
 ## **Requirements**
 
 ### **Required packages**
