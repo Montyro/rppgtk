@@ -1,9 +1,9 @@
 # **An Image-Processing Toolkit for Remote Photoplethysmography.**
 
 <p align="center">
-  <img src="./Figures/logovpu.gif" height="300">
+  <img src="./Figures/logovpu.gif" width="300">
   <img src="./Figures/LogoOficial-EPS-300-3x3.png" height="300">
-  <img src="./Figures/logo_uam.jpg"height="300">
+  <img src="./Figures/logo_uam.jpg" width="300">
 </p>
 
 This is a library that includes different modules to more easily perform some of the usual preprocessing steps in remote photoplethysmography, like face detection, changes in color space, skin detection, region of interest selection among others. Modules include some algorithms that use deep learning, using the tensorflow library.
