@@ -1,7 +1,7 @@
 # **An Image-Processing Toolkit for Remote Photoplethysmography.**
 
 <p align="center">
-  <img src="./Figures/logovpu.gif" width="300">
+  <img src="./Figures/logovpu.gif" width="200">
    <img src="./Figures/logo_uam.jpg" width="300">
   <img src="./Figures/LogoOficial-EPS-300-3x3.png" height="150">
  
