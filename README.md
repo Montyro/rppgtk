@@ -9,7 +9,7 @@
 
 This is a library that includes different modules to more easily perform some of the usual preprocessing steps in remote photoplethysmography, like face detection, changes in color space, skin detection, region of interest selection among others. Modules include some algorithms that use deep learning, using the tensorflow library.
 
-## Code will be uploaded when the letter associated to this work is published. The toolkit will be available to install using pip.
+**Code will be uploaded when the letter associated to this work is published. The toolkit will be available to install using pip.**
 
 
 ## **Currently implemented modules**
