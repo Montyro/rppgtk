@@ -15,7 +15,7 @@ This is a library that includes different modules to more easily perform some of
 ## **Currently implemented modules**
 
 <p align="center">
-  <img src="./Figures/Diagram_v2_wide.png">
+  <img src="./Figures/Diagram_v2.png">
 </p>
 
 
